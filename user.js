@@ -7,7 +7,7 @@ async function uidToUser(uidOrUsername) {
   }
   // Get first field (username)
   // ling-jda:********:904518429:1412170593::0:0:Johan Dahl:/Users/ling-jda:/bin/zsh
-  const [username, , uid, gid, , , , name, home, shell] = stdout.split(':')
+  const [username, , uid, gid, , , , name, home, shell] = stdout.trim().split(':')
   return { username, uid: parseInt(uid), gid: parseInt(gid), name, home, shell }
 }
 
