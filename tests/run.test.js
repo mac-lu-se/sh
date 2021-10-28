@@ -7,7 +7,7 @@ Deno.test({
     const { status, stdout, stderr } = await run(['ls', '-1'])
     assert(status.success)
     assert(stdout.includes('run.js'))
-    assert(stderr === '')
+    assertEquals(stderr, '')
   },
 })
 
@@ -16,8 +16,18 @@ Deno.test({
   fn: async () => {
     const { status, stdout, stderr } = await run(['ls', '--xxxx'])
     assert(!status.success)
-    assert(stdout === '')
+    assertEquals(stdout, '')
     assert(stderr.includes('unrecognized option'))
+  },
+})
+
+Deno.test({
+  name: 'Run in shell',
+  fn: async () => {
+    const { status, stdout, stderr } = await run('ls -l')
+    assert(status.success)
+    assert(stdout.includes('run.js'))
+    assertEquals(stderr, '')
   },
 })
 
