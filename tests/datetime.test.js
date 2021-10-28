@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.93.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.110.0/testing/asserts.ts";
 import { formatDate } from '../datetime.js'
 
 

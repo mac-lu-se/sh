@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.93.0/testing/asserts.ts";
+import { assertEquals } from 'https://deno.land/std@0.110.0/testing/asserts.ts'
 import { currentUser, locale, lastUser } from '../user.js'
 
 Deno.test({
