@@ -4,7 +4,7 @@ import { addLine, fileInfo } from './file.js'
 import { showDialog } from './dialog.js'
 import { formatDate } from './datetime.js'
 
-export {
+export default {
   addLine,
   currentUser,
   fileInfo,
